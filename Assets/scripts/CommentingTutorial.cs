@@ -34,11 +34,5 @@ public class CommentingTutorial : MonoBehaviour
         myFirstBool = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     #endregion
 }
