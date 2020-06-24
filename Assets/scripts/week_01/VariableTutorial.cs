@@ -13,7 +13,7 @@ public class VariableTutorial : MonoBehaviour
     ///and not the script
     
     public int myFirstInt = 1; // stores whole numbers
-    private int m_mySecondInt = 4; // doesn't show up in the inspector
+    public int m_mySecondInt = 4; // doesn't show up in the inspector
     public float myFirstFloat = 3.455f; // used to store decimal numbers (8)
     public double myFirstDouble = 0.11f; // used to store decimal numbers (16)
     public bool myFirstBool = false; // used to store a true or false value
