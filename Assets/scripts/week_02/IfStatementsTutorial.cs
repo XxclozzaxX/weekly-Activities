@@ -39,15 +39,39 @@ public class IfStatementsTutorial : MonoBehaviour
         {
             Debug.Log("is exactly 7");
         }
-
+        // < less than
         if(myFavouriteNumber < 5)
         {
             Debug.Log("Your number is less than 5");
         }
-
+        // > greater than
         if(myFavouriteNumber > 5)
         {
             Debug.Log("your number is greater than 5");
         }
+
+        // example of multiple conditions
+        // both conditions need to be true in order for the
+        // code to be exercuted
+        if (myName == "chloe" && likesCoffee == true) 
+        {
+            Debug.Log("Chloe lifes coffee");
+        }
+        // || either or can be true for this code
+        if (likesCoffee == true)
+        {
+            if (myName == "chloe")
+            {
+                Debug.Log("chloe likes coffee");
+            }
+            if(myName != "chloe")
+            {
+                Debug.Log("Not Chloe");
+                if(myFavouriteNumber > 4 && myFavouriteNumber < 7)
+                {
+                    Debug.Log("my fave number is" + myFavouriteNumber);
+                }
+            }
+        }  
     }
 }
