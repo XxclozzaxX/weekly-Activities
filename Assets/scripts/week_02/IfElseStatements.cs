@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class IfElseStatements : MonoBehaviour
 {
-    public string myName = "Chloe";
-    public string myCarColour = "Black";
-    public bool likesCoffee = true;
-    public int myAge = 19;
+    public string myName = "Chloe"; // users name
+    public string myCarColour = "Black"; // car colour
+    public bool likesCoffee = true; // coffee preferance
+    public int myAge = 19; // usres age
 
     // Start is called before the first frame update
     void Start()
