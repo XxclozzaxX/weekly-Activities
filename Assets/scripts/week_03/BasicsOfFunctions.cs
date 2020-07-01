@@ -27,6 +27,12 @@ public class BasicsOfFunctions : MonoBehaviour
     {
         PrintMyClassTime();
     }
+    // the anatomy of a function follows
+    // the access type: public / private
+    // the return type: void - return nothing, just do instructions
+    // the function name, all caps for words
+    // finally the parentheses and curly braces
+
     // assess type || return type || function name
     public void PrintFullName()
     {
@@ -34,12 +40,6 @@ public class BasicsOfFunctions : MonoBehaviour
         // a function can be called inside of another function
         PrintMyAge();
     }
-
-    // the anatomy of a function follows
-    // the access type: public / private
-    // the return type: void - return nothing, just do instructions
-    // the function name, all caps for words
-    // finally the parentheses and curly braces
 
     public void PrintMyAge()
     {
@@ -59,6 +59,7 @@ public class BasicsOfFunctions : MonoBehaviour
         // prints out the users age in months, weeks and days
         Debug.Log("my age is " + myAgeInY + " years old, which is " + myAgeInM + " in months," +
             " which is " + myAgeInW + " in weeks, which is " + myAgeInD);
+        Debug.Log("print my age complete");
     }
     public void PrintMyClassTime()
     {
