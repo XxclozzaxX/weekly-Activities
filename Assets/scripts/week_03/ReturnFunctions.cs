@@ -97,8 +97,9 @@ public class ReturnFunctions : MonoBehaviour
         // and example of how debug.log effectivly in a function
         Debug.Log("my age in days is: " + myAgeInD);
         // prints out the users age in months, weeks and days
-        Debug.Log("my age is " + MyAgeInYears + " years old, which is " + myAgeInM + " in months," +
-            " which is " + myAgeInW + " in weeks, which is " + myAgeInD);
+        Debug.Log("my age is " + MyAgeInYears + " years old, which is " +
+            " " + myAgeInM + " in months," + " which is " + myAgeInW +
+            " in weeks, which is " + myAgeInD);
         Debug.Log("print my age complete");
     }
     public bool IsMyNameEqualTo(string Name, string NameToCheck)
