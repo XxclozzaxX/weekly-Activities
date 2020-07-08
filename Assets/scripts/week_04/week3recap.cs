@@ -25,7 +25,7 @@ public class week3recap : MonoBehaviour
 
     public void ASimpleVoidFunction()
     {
-        int myTempInt = 0;
+        // int myTempInt = 0;
         //if(true)
         //{
 
