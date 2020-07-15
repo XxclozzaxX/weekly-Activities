@@ -8,7 +8,8 @@ public class movingcube : MonoBehaviour
     public Color startingColour; // stores the starting colour
     private Vector3 m_startingPoint; // stores the starting position
     public Vector3 endPoint;// stores the position we are moving to
-    private Vector3 m_currentMovePosition; // stores the current position were coving to 
+    private Vector3 m_currentMovePosition; // stores the current position were coving to
+    public float movespeed = 5; // amount of force applied to the cube
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +28,43 @@ public class movingcube : MonoBehaviour
         m_MyMeshRenderer.material.color = startingColour;
         // we are storing our starting position when we start the game
         m_startingPoint = transform.position;
-
-        endPoint = GetNewEndPoint(); 
+        // here we create a random point
+        endPoint = GetNewEndPoint();
+        m_currentMovePosition = endPoint;
     }
-    private void Update()
+
+    void Update()
     {
-        
+        MovePlatform(); 
+    }
+
+    // updates the current position
+    private void MovePlatform()
+    {
+        transform.position = Vector3.Lerp(transform.position,
+            m_currentMovePosition, movespeed * Time.deltaTime);
+
+        // if we are close to the end we get the start position and move towards that
+        if (Vector3.Distance(transform.position, endPoint) <= 0.1f)
+        {
+            m_currentMovePosition = m_startingPoint;
+            // accessing the mesh renderer and changing the colour to a random colour
+            m_MyMeshRenderer.material.color = RetuenRandomColour();
+        }
+        else if (Vector3.Distance(transform.position, endPoint) <= 0.1f)
+        {
+            endPoint = GetNewEndPoint();
+            m_currentMovePosition = endPoint;
+            // accessing the mesh renderer and changing the colour to a random colour
+            m_MyMeshRenderer.material.color = RetuenRandomColour();
+        }
+    }
+
+    // changing the colour of the cube to a random colour
+    private Color RetuenRandomColour()
+    {
+        return new Color(Random.Range(0.0f, 1.0f),
+            Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
     }
 
     // returns a new end point based on the starting point and a random vector
