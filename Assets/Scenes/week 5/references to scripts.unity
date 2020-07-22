@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTransform: {fileID: 1227290847}
+  scripttofund2: {fileID: 304205062}
 --- !u!1 &1227290846
 GameObject:
   m_ObjectHideFlags: 0

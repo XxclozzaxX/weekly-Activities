@@ -11,10 +11,14 @@ public class ScriptFinder : MonoBehaviour
     public Transform objectTransform;
     // a referance to the object transform that has our script to find
 
+    public ScriptToFind scripttofind2; 
+
     private void Awake()
     {
         scriptFinderInstance = this;
         // this keyword refers to this instance of this script
+        scripttofind2.setname("chloe");
+        scripttofind2.myName = "chloe";
     }
 
     // Start is called before the first frame update
